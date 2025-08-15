@@ -7,6 +7,7 @@ import Card, { CardContent, CardHeader } from '../ui/Card'
 import Button from '../ui/Button'
 import Link from 'next/link'
 import LearningPathRecommendations from '../recommendations/LearningPathRecommendations'
+import LearningCalendar from '../calendar/LearningCalendar'
 import { getUserCertificates, CertificateData } from '@/lib/certificates'
 import { Course } from '@/types/database'
 
@@ -495,6 +496,11 @@ export default function UserDashboard({ user }: UserDashboardProps) {
             </CardContent>
           </Card>
         )}
+
+        {/* 学習カレンダー */}
+        <div className="mt-8">
+          <LearningCalendar user={user} />
+        </div>
 
         {/* 学習パス推奨 */}
         <div className="mt-8">

@@ -24,3 +24,147 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Learning Calendar Styles */
+.learning-calendar-wrapper {
+  @apply max-w-full overflow-hidden;
+}
+
+.learning-calendar-wrapper .react-calendar {
+  @apply w-full border border-gray-300 rounded-lg shadow-sm bg-white font-sans;
+  line-height: 1.125em;
+}
+
+.learning-calendar-wrapper .react-calendar__navigation {
+  @apply flex items-center justify-between p-2 bg-gray-50 border-b border-gray-200;
+}
+
+.learning-calendar-wrapper .react-calendar__navigation button {
+  @apply min-w-8 h-8 bg-transparent border-none rounded-md hover:bg-gray-200 text-gray-700 font-medium transition-colors;
+}
+
+.learning-calendar-wrapper .react-calendar__navigation button:enabled:hover,
+.learning-calendar-wrapper .react-calendar__navigation button:enabled:focus {
+  @apply bg-blue-50 text-blue-600;
+}
+
+.learning-calendar-wrapper .react-calendar__navigation button:disabled {
+  @apply text-gray-400 cursor-not-allowed;
+}
+
+.learning-calendar-wrapper .react-calendar__navigation__label {
+  @apply font-semibold text-gray-900 text-lg;
+}
+
+.learning-calendar-wrapper .react-calendar__month-view__weekdays {
+  @apply bg-gray-50 border-b border-gray-200;
+}
+
+.learning-calendar-wrapper .react-calendar__month-view__weekdays__weekday {
+  @apply p-2 text-center text-sm font-medium text-gray-600;
+}
+
+.learning-calendar-wrapper .react-calendar__month-view__weekdays__weekday abbr {
+  @apply no-underline;
+}
+
+.learning-calendar-wrapper .react-calendar__month-view__days {
+  @apply grid;
+}
+
+.learning-calendar-wrapper .react-calendar__tile {
+  @apply relative min-h-12 p-2 bg-white border border-gray-100 text-center text-sm hover:bg-gray-50 transition-colors flex flex-col items-center justify-center;
+}
+
+.learning-calendar-wrapper .react-calendar__tile:enabled:hover,
+.learning-calendar-wrapper .react-calendar__tile:enabled:focus {
+  @apply bg-blue-50 border-blue-200;
+}
+
+.learning-calendar-wrapper .react-calendar__tile--active {
+  @apply bg-blue-600 text-white border-blue-600;
+}
+
+.learning-calendar-wrapper .react-calendar__tile--active:enabled:hover,
+.learning-calendar-wrapper .react-calendar__tile--active:enabled:focus {
+  @apply bg-blue-700;
+}
+
+.learning-calendar-wrapper .react-calendar__tile--now {
+  @apply bg-yellow-50 border-yellow-200 text-yellow-800;
+}
+
+.learning-calendar-wrapper .react-calendar__tile--now:enabled:hover,
+.learning-calendar-wrapper .react-calendar__tile--now:enabled:focus {
+  @apply bg-yellow-100;
+}
+
+.learning-calendar-wrapper .react-calendar__tile--neighboringMonth {
+  @apply text-gray-300;
+}
+
+/* Learning day indicators */
+.learning-calendar-wrapper .react-calendar__tile.learning-day-low {
+  @apply bg-green-100 border-green-200 text-green-800;
+}
+
+.learning-calendar-wrapper .react-calendar__tile.learning-day-medium {
+  @apply bg-green-300 border-green-400 text-green-900;
+}
+
+.learning-calendar-wrapper .react-calendar__tile.learning-day-high {
+  @apply bg-green-500 border-green-600 text-white;
+}
+
+.learning-calendar-wrapper .react-calendar__tile.learning-day-low:enabled:hover,
+.learning-calendar-wrapper .react-calendar__tile.learning-day-medium:enabled:hover,
+.learning-calendar-wrapper .react-calendar__tile.learning-day-high:enabled:hover {
+  @apply opacity-80;
+}
+
+.learning-indicator {
+  @apply absolute -top-1 -right-1 w-5 h-5 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold shadow-sm;
+}
+
+.learning-indicator .lesson-count {
+  @apply text-xs leading-none;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .learning-calendar-wrapper .react-calendar {
+    @apply bg-gray-800 border-gray-600 text-white;
+  }
+
+  .learning-calendar-wrapper .react-calendar__navigation {
+    @apply bg-gray-700 border-gray-600;
+  }
+
+  .learning-calendar-wrapper .react-calendar__navigation button {
+    @apply text-gray-200 hover:bg-gray-600;
+  }
+
+  .learning-calendar-wrapper .react-calendar__navigation__label {
+    @apply text-white;
+  }
+
+  .learning-calendar-wrapper .react-calendar__month-view__weekdays {
+    @apply bg-gray-700 border-gray-600;
+  }
+
+  .learning-calendar-wrapper .react-calendar__month-view__weekdays__weekday {
+    @apply text-gray-300;
+  }
+
+  .learning-calendar-wrapper .react-calendar__tile {
+    @apply bg-gray-800 border-gray-700 text-gray-200 hover:bg-gray-700;
+  }
+
+  .learning-calendar-wrapper .react-calendar__tile--now {
+    @apply bg-yellow-800 border-yellow-600 text-yellow-200;
+  }
+
+  .learning-calendar-wrapper .react-calendar__tile--neighboringMonth {
+    @apply text-gray-500;
+  }
+}
