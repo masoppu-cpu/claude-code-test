@@ -1,0 +1,21 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" rx="64" fill="#2563eb"/>
+  
+  <!-- AI Brain Symbol -->
+  <circle cx="256" cy="200" r="80" fill="#ffffff" fill-opacity="0.2"/>
+  
+  <!-- Circuit Lines -->
+  <path d="M176 200 L136 160 M336 200 L376 160 M256 120 L256 80 M206 150 L166 110 M306 150 L346 110" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Book/Learning Symbol -->
+  <rect x="180" y="300" width="152" height="120" rx="8" fill="#ffffff"/>
+  <rect x="200" y="320" width="112" height="4" fill="#2563eb"/>
+  <rect x="200" y="340" width="112" height="4" fill="#2563eb"/>
+  <rect x="200" y="360" width="112" height="4" fill="#2563eb"/>
+  <rect x="200" y="380" width="80" height="4" fill="#2563eb"/>
+  
+  <!-- Play Button -->
+  <circle cx="256" cy="200" r="30" fill="#ffffff"/>
+  <polygon points="246,185 276,200 246,215" fill="#2563eb"/>
+</svg>
